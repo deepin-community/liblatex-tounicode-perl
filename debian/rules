@@ -2,3 +2,6 @@
 
 %:
 	dh $@
+
+execute_before_dh_installman:
+	$(MAKE) -f Makefile.TDS ltx2unitxt.1

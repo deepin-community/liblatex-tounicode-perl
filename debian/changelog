@@ -1,5 +1,43 @@
-template-repository (1.0-1) unstable; urgency=medium
+liblatex-tounicode-perl (0.54-2) unstable; urgency=medium
 
-  * Initial release
+  * Team upload
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  * add Breaks/Replaces texlive-bibtex-extra (<< 2023.20231207-2)
+    (Closes: #1058690)
+
+ -- Damyan Ivanov <dmn@debian.org>  Thu, 14 Dec 2023 18:45:34 +0000
+
+liblatex-tounicode-perl (0.54-1) unstable; urgency=medium
+
+  * New upstream version 0.54
+  * Generate and install ltx2unitxt.1.
+
+ -- Andrius Merkys <merkys@debian.org>  Mon, 20 Nov 2023 05:44:13 -0500
+
+liblatex-tounicode-perl (0.53-1) unstable; urgency=medium
+
+  * New upstream version 0.53
+  * Update debian/copyright.
+  * Update standards version to 4.6.2, no changes needed.
+
+ -- Andrius Merkys <merkys@debian.org>  Thu, 24 Aug 2023 02:01:34 -0400
+
+liblatex-tounicode-perl (0.11-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + liblatex-tounicode-perl: Add Multi-Arch: foreign.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Thu, 13 Oct 2022 15:16:35 +0100
+
+liblatex-tounicode-perl (0.11-2) unstable; urgency=medium
+
+  * Team upload.
+  * No-change source-only re-upload.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 11 Dec 2021 00:58:58 +0100
+
+liblatex-tounicode-perl (0.11-1) unstable; urgency=low
+
+  * Initial release (Closes: #999599)
+
+ -- Andrius Merkys <merkys@debian.org>  Sat, 13 Nov 2021 01:23:50 -0500
