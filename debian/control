@@ -1,15 +1,38 @@
-Source: template-repository
-Section: unknown
+Source: liblatex-tounicode-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Andrius Merkys <merkys@debian.org>,
+Section: perl
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends:
+ debhelper-compat (= 13),
+Build-Depends-Indep:
+ help2man,
+ perl,
+Standards-Version: 4.6.2
+Homepage: https://metacpan.org/release/LaTeX-ToUnicode
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/liblatex-tounicode-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/liblatex-tounicode-perl.git
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-perl
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: liblatex-tounicode-perl
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${perl:Depends},
+Breaks: texlive-bibtex-extra (<< 2023.20231207-2)
+Replaces: texlive-bibtex-extra (<< 2023.20231207-2)
+Multi-Arch: foreign
+Description: Convert LaTeX commands to Unicode
+ LaTeX::ToUnicode provides a method to convert LaTeX-style markups for accents
+ etc. into their Unicode equivalents. It translates commands for special
+ characters or accents into their Unicode equivalents and removes formatting
+ commands. It is not at all bulletproof or complete.
+ .
+ This module converts values from BibTeX files into plain text.
+ .
+ In contrast to TeX::Encode, this module does not create HTML of any kind,
+ including for HTML/XML metacharacters such as <, >, &, which can appear
+ literally in the output. Entities are other handling for these has to happen
+ at another level, if need be.
